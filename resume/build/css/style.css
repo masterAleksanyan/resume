@@ -12,10 +12,11 @@ html {
 
 body {
   font-family: 'MyriadPro-Regular';
+  color: #000;
   font-size: 24px;
   line-height: 1.1; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   line-height: 0.9;
   text-transform: uppercase; }
 
@@ -27,7 +28,7 @@ h2 {
   color: #3d6cb0; }
 
 h3 {
-  font-size: 3.9rem; }
+  font-size: 4rem; }
 
 .wrapper {
   max-width: 1920px;
@@ -35,12 +36,10 @@ h3 {
   margin: 0 auto;
   padding: 7vw 4vw; }
 
-.d_flex {
+.page-content {
   display: -webkit-box;
   display: -webkit-flex;
-  display: flex; }
-
-.j_content_between {
+  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between; }
@@ -58,7 +57,8 @@ h3 {
 
 .left-content {
   -webkit-flex-basis: calc(43% - 6vw);
-  flex-basis: calc(43% - 6vw); }
+  flex-basis: calc(43% - 6vw);
+  margin-right: 6vw; }
 
 .right-content {
   -webkit-flex-basis: 57%;
@@ -106,15 +106,17 @@ section {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 5rem; }
   .title-block__icon {
     position: relative;
     width: 9.5rem;
     height: 9.5rem;
+    text-align: center;
     color: #fff;
     background-color: #3d6cb0;
     border-radius: 50%;
-    font-size: 4em;
+    font-size: 9rem;
     left: 1rem;
     bottom: 0.5rem;
     margin-right: 4rem; }
@@ -137,22 +139,26 @@ section {
     background-color: #3d6cb0;
     margin-left: 1rem; }
 
-.section-text {
-  margin-top: 2rem; }
-
 .contacts {
   font-size: 32px; }
   .contacts p {
-    margin-top: 6rem; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .contacts p + p {
+      margin-top: 6rem; }
     .contacts p *:first-child {
-      display: inline-block;
-      width: 25%;
+      -webkit-flex-basis: 25%;
+      flex-basis: 25%;
+      min-width: 150px;
       color: #3d6cb0;
       font-weight: 700;
       text-transform: uppercase; }
 
 .skills {
-  padding: 4rem 7rem 0; }
+  padding: 0 7rem; }
   .skills__name {
     text-align: center;
     text-transform: uppercase;
@@ -177,8 +183,131 @@ section {
 .education {
   margin-top: 1.5rem; }
 
+.article {
+  margin-bottom: 3rem;
+  padding-left: 8rem; }
+  .article__header {
+    margin-bottom: 2.3rem;
+    font-size: 4rem; }
+    .article__header div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center; }
+  .article__name {
+    position: relative;
+    margin-right: 2.3rem; }
+    .article__name::before {
+      content: '';
+      position: absolute;
+      left: -6rem;
+      top: .2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: #000; }
+    .article__name_blue {
+      color: #3d6cb0; }
+  .article__university {
+    font-weight: 400; }
+  .article__text {
+    padding-right: 2rem; }
+
+.softwere-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.soft {
+  -webkit-flex-basis: 45%;
+  flex-basis: 45%;
+  margin-bottom: 4.4rem; }
+  .soft__name {
+    margin-bottom: 2.5rem;
+    font-weight: 400; }
+  .soft__level {
+    position: relative;
+    width: 100%;
+    height: 3.6rem; }
+    .soft__level p {
+      height: 100%; }
+    .soft__level_full {
+      width: 100%;
+      background-color: #e6e6e6; }
+    .soft__level_part {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70%;
+      background-color: #3d6cb0; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 8px; } }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 6px; }
+  .wrapper {
+    padding: 7vw 15px; } }
+
 /* Medium Devices, Desktops */
-/* Small Devices, Tablets */
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 7vw 5vw; }
+  body {
+    font-size: 20px; }
+  .page-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  .left-content {
+    margin-right: 0;
+    -webkit-flex-basis: auto;
+    flex-basis: auto; }
+  .right-content {
+    -webkit-flex-basis: auto;
+    flex-basis: auto; }
+  .education {
+    margin-top: 8rem; }
+  .contacts {
+    font-size: 24px; }
+    .contacts p {
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden; } }
+
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 578px) {
+  .wrapper {
+    padding: 40px 15px; }
+  .softwere-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  .user__name {
+    font-size: 7.6rem; }
+    .user__name span {
+      font-size: 7rem; }
+  .soft {
+    -webkit-flex-basis: auto;
+    flex-basis: auto; }
+  .skills {
+    padding: 0; }
+  .article {
+    padding-left: 0; }
+    .article__name::before {
+      display: none; } }
