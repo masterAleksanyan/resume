@@ -1,0 +1,8 @@
+mixin education_item(degree, date, name, text, identificator)
+  article.article
+    header.article__header
+      div
+        h3(class="article__name "+ identificator)= degree
+        span.article__date= date
+      h4.article__university= name
+    p.article__text= text
