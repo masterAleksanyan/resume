@@ -1,9 +1,0 @@
-mixin user(u_name,u_lastname,u_location,u_photo_name)
-  .user
-    .user__img
-      img(src="assets/img/"+u_photo_name alt=`${u_name} ${u_lastname}`)
-    .user__content
-      h1.user__name
-        span= u_name
-        = u_lastname
-      h3.user__vocation= u_location
