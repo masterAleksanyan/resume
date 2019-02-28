@@ -1,0 +1,35 @@
+.skills{
+  padding: 0 7rem;
+  &__item{
+    
+  }
+  &__name{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 4rem 0 2rem;
+    font-size: 4rem;
+    line-height: 0.8;
+  }
+  &__level{
+    display: flex;
+    justify-content: space-between;
+    span{
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: #e6e6e6;
+    }
+    .active{
+      background-color: $resumeColor;
+    }
+  }
+}
+@media only screen and (max-width : 578px) {
+  .skills{
+    padding: 0;
+    &__level span{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

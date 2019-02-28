@@ -40,7 +40,6 @@ h3{
   font-size: 4rem;
 }
 
-
 .wrapper{
   display: flex;
   justify-content: space-between;
@@ -67,240 +66,15 @@ section{
   margin-top: 8rem;
 }
 
+
 .user-block{
   padding-top: 2rem;
 }
-
-
-
-//  User block
-.user{
-  &__img{
-    width: 34rem;
-    height: 34rem;
-    padding: 2rem;
-    border: 2px solid $resumeColor;
-    border-radius: 50%;
-    box-sizing: content-box;
-    margin: 0 auto;
-    img{
-      width: 100%;
-      height: 100%;
-    }
-  }
-  &__content{
-    margin-top: 5.7rem;
-    text-align: center;
-  }
-  &__name{
-    span{
-      display: block;
-      font-family: 'MyriadPro-LightSemiExt';
-      font-size: 8rem;
-      font-weight: 400;
-      text-shadow: 0 0 10px #333;
-    }
-  }
-  &__vocation{
-    margin-top: 2rem;
-  }
-}
-@media only screen and (max-width : 578px) {
-  .user__name{
-    font-size: 7.6rem;
-    span{
-      font-size: 7rem;
-    }
-  }
-}
-
-// User block end
-
 
 // Profile section
 .profile{
   margin-top: 12.8rem;
 }
-
-.title-block{
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5rem;
-  &__icon{
-    position: relative;
-    width: 9.5rem;
-    height: 9.5rem;
-    text-align: center;
-    color: #fff;
-    background-color: $resumeColor;
-    border-radius: 50%;
-    font-size: 9rem;
-    left: 1rem;
-    bottom: 0.5rem;
-    margin-right: 4rem;
-    &::after{
-      content: '';
-      position: absolute;
-      left: -1rem;
-      top: -1rem;
-      right: -1rem;
-      bottom: -1rem;
-      border: 1px solid $resumeColor;
-      border-radius: 50%;
-    }
-  }
-  &::after{
-    content: '';
-    display: block;
-    height: 0.8rem;
-    flex-grow: 1;
-    background-color: $resumeColor;
-    margin-left: 1rem;
-  }
-}
-@media only screen and (max-width : 578px){
-  .title-block__name h2{
-    font-size: 5rem;
-  }
-}
-// Profile section end
-
-
-// Contact section
-.contacts{
-  font-size: 32px;
-  p{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden; // ie 11
-    & + p{margin-top: 6rem;}
-    *:first-child{
-      flex-basis: 25%;
-      min-width: 150px;
-      color: $resumeColor;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-  }
-}
-@media only screen and (max-width : 1024px) {
-  .contacts{
-    font-size: 24px;
-  }
-}
-// Contact section end
-
-
-// skills section 
-.skills{
-  padding: 0 7rem;
-  &__item{
-    
-  }
-  &__name{
-    text-align: center;
-    text-transform: uppercase;
-    margin: 4rem 0 2rem;
-    font-size: 4rem;
-    line-height: 0.8;
-  }
-  &__level{
-    display: flex;
-    justify-content: space-between;
-    span{
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background-color: #e6e6e6;
-    }
-    .active{
-      background-color: $resumeColor;
-    }
-  }
-}
-@media only screen and (max-width : 578px) {
-  .skills{
-    padding: 0;
-    &__level span{
-      width: 24px;
-      height: 24px;
-    }
-  }
-}
-// skills section end
-
-
-// education section 
-.education{
-  margin-top: 1.5rem;
-  &-block{
-    
-  }
-}
-
-.article{
-  margin-bottom: 3rem;
-  padding-left: 8rem;
-  &__header{
-    margin-bottom: 2.3rem;
-    font-size: 4rem;
-    div{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-  }
-  &__name{
-    position: relative;
-    margin-right: 2.3rem;
-    &::before{
-      content: '';
-      position: absolute;
-      left: -6rem;
-      top: .2rem;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background-color: #000;
-    }
-    &_blue{
-      color: $resumeColor;
-    }
-  }
-  &__date{
-    
-  }
-  &__university{
-    font-weight: 400;
-  }
-  &__text{
-    padding-right: 2rem;
-  }
-}
-@media only screen and (max-width : 578px) {
-  .article{
-    padding-left: 0;
-    &__name::before{
-      display: none;
-    }
-    &__text {
-      text-align: justify;
-      padding-right: 0;
-    }
-  }
-}
-// education section end
-
-
-// experience section 
-.experience{
-  
-}
-// experience section end
-
 
 // software section 
 .softwere-block{
@@ -309,41 +83,13 @@ section{
   flex-wrap: wrap;
 }
 
-.soft{
-  flex-basis: 45%;
-  margin-bottom: 4.4rem;
-  &__name{
-    margin-bottom: 2.5rem;
-    font-weight: 400;
-  }
-  &__level{
-    position: relative;
-    width: 100%;
-    height: 3.6rem;
-    p{
-      height: 100%;
-    }
-    &_full{
-      width: 100%;
-      background-color: #e6e6e6;
-    }
-    &_part{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 70%;
-      background-color: $resumeColor;
-    }
-  }
-}
-@media only screen and (max-width : 578px) {
-  .soft{
-    flex-basis: auto;  // ie 11
-  }
-}
-// software section end
 
-
+@import "../modules/title_/title.scss";
+@import "../modules/user_/user.scss";
+@import "../modules/contacts_/contacts.scss";
+@import "../modules/skills_/skills.scss";
+@import "../modules/education_/education.scss";
+@import "../modules/software_/software.scss";
 
 
 

@@ -1,0 +1,23 @@
+.contacts{
+  font-size: 32px;
+  p{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden; // ie 11
+    & + p{margin-top: 6rem;}
+    *:first-child{
+      flex-basis: 25%;
+      min-width: 150px;
+      color: $resumeColor;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .contacts{
+    font-size: 24px;
+  }
+}
