@@ -1,23 +1,35 @@
 .contacts{
   font-size: 32px;
+  padding-top: 3rem;
   p{
     display: flex;
-    flex-wrap: wrap;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden; // ie 11
-    & + p{margin-top: 6rem;}
+    & + p{
+      margin-top: 5.4rem;
+    }
     *:first-child{
-      flex-basis: 25%;
+      flex-basis: 31%;
       min-width: 150px;
       color: $resumeColor;
       font-weight: 700;
       text-transform: uppercase;
     }
+    a{
+      flex-basis: 69%;
+      overflow-x: auto;
+      overflow-y: hidden; // ie 11
+    }
   }
 }
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 1440px) {
   .contacts{
-    font-size: 24px;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width : 1025px) {
+  .contacts{
+    font-size: 17px;
   }
 }

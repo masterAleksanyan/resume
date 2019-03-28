@@ -1,12 +1,12 @@
 .user{
   &__img{
-    width: 34rem;
-    height: 34rem;
-    padding: 2rem;
-    border: 2px solid $resumeColor;
-    border-radius: 50%;
-    box-sizing: content-box;
-    margin: 0 auto;
+      width: 36rem;
+      height: 36rem;
+      padding: 2.3rem;
+      border: 2px solid #3d6cb0;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin: 0 auto;
     img{
       width: 100%;
       height: 100%;
@@ -17,16 +17,18 @@
     text-align: center;
   }
   &__name{
+    line-height: .74;
     span{
       display: block;
       font-family: 'MyriadPro-LightSemiExt';
-      font-size: 8rem;
+      font-size: 8.1rem;
       font-weight: 400;
       text-shadow: 0 0 10px #333;
+      margin-bottom: 1.9rem;
     }
   }
   &__vocation{
-    margin-top: 2rem;
+    margin-top: 2.7rem;
   }
 }
 @media only screen and (max-width : 578px) {

@@ -19,7 +19,7 @@ body{
   font-family: 'MyriadPro-Regular';
   color: #000;
   font-size: 24px;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 h1, h2, h3, h4{
@@ -34,6 +34,7 @@ h1{
 h2{
   font-size: 6.4rem;
   color: $resumeColor;
+  letter-spacing: .03em;
 }
 
 h3{
@@ -46,7 +47,7 @@ h3{
   max-width: 1920px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 7vw 4vw;
+  padding: 7vw 3.8vw;
 }
 
 .text_center{
@@ -56,11 +57,10 @@ h3{
 }
 
 .left-content{
-  flex-basis: calc(43% - 6vw);
-  margin-right: 6vw;
+  width: 40%;
 }
 .right-content{
-  flex-basis: 57%;
+  width: 55%;
 }
 section{
   margin-top: 8rem;
@@ -74,6 +74,10 @@ section{
 // Profile section
 .profile{
   margin-top: 12.8rem;
+  line-height: 1.2;
+  strong{
+    line-height: 1.24;
+  }
 }
 
 // software section 
@@ -96,40 +100,56 @@ section{
 /*==========  Desktop First Method  ==========*/
 
 
-@media only screen and (max-width : 1440px) {
+@media screen and (max-width : 1440px) {
   html {font-size: 8px;}
+  body{
+    font-size: 20px;
+  }
 }
 
-@media only screen and (max-width : 1200px) {
+@media screen and (max-width : 1200px) {
   html{font-size: 6px;}
+  body{
+    font-size: 18px;
+  }
   .wrapper{
     padding: 7vw 15px;
   }
 }
 
-@media only screen and (max-width : 1024px) {
+@media screen and (max-width : 1025px) {
   .wrapper{
     padding: 7vw 5vw;
     flex-direction: column;
+    align-items: center;
   }
   body{
-    font-size: 20px;
+    font-size: 14px;
   }
   .left-content{
     margin-right: 0;
-    flex-basis: auto;   // ie 11
+    width: 80%;
   }
   .right-content{
-    flex-basis: auto;
+    width: 80%;
   }
   .education{
     margin-top: 8rem;
   }
 }
 
-@media only screen and (max-width : 578px) {
+@media screen and (max-width: 578px) {
+  html{
+    font-size: 5px;
+  }
   .wrapper{
     padding: 40px 15px;
+  }
+  .left-content{
+    width: 100%;
+  }
+  .right-content{
+    width: 100%;
   }
   .section-text p{
     text-align: justify;
@@ -137,9 +157,16 @@ section{
   .softwere-block{
     flex-direction: column;
   }
+  .contacts p :first-child{
+    min-width: 100px;
+  }
 }
 
-
+@media screen and (max-width: 425px) {
+  html{
+    font-size: 4px;
+  }
+}
 
 
 

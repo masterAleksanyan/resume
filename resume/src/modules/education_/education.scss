@@ -1,15 +1,15 @@
 .education{
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   &-block{
-    
+    padding-top: 2.3rem;
   }
 }
 
 .article{
-  margin-bottom: 3rem;
+  margin-bottom: 2.4rem;
   padding-left: 8rem;
   &__header{
-    margin-bottom: 2.3rem;
+    margin-bottom: 1.6rem;
     font-size: 4rem;
     div{
       display: flex;
@@ -38,10 +38,12 @@
     
   }
   &__university{
+    margin-top: 1.4rem;
     font-weight: 400;
   }
   &__text{
     padding-right: 2rem;
+    line-height: 1.2;
   }
 }
 @media only screen and (max-width : 578px) {

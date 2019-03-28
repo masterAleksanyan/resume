@@ -1,12 +1,9 @@
 .skills{
   padding: 0 7rem;
-  &__item{
-    
-  }
   &__name{
     text-align: center;
     text-transform: uppercase;
-    margin: 4rem 0 2rem;
+    margin: 5rem 0 2rem;
     font-size: 4rem;
     line-height: 0.8;
   }
@@ -24,12 +21,20 @@
     }
   }
 }
-@media only screen and (max-width : 578px) {
+@media only screen and (max-width : 1440px) {
+  .skills{
+    &__level span{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+@media only screen and (max-width : 1025px) {
   .skills{
     padding: 0;
     &__level span{
-      width: 24px;
-      height: 24px;
+      width: 15px;
+      height: 15px;
     }
   }
 }
