@@ -18,36 +18,90 @@ html(lang="en")
     .wrapper
       .left-content
         .user-block
-          +user('Vazgen', 'Aleksanyan', 'Frontend developer', 'user.png')
+          +user({name: 'Vazgen',
+                lastname: 'Aleksanyan',
+                vocation: 'Frontend developer',
+                photoname: 'user.png'})
         section.profile
           +title_block('Profile', 'profile_icon')
           .section-text
             p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. <strong>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</strong>
         section.contact
           +title_block('Contact', 'phone_icon')
-          +contacts('Avanesov Street, Yerevan', 'aleksanyan9092@gmail.com', '34793887250', 'www.youtube.com')
+          +contacts({address: 'Avanesov Street, Yerevan',
+                    email: 'aleksanyan9092@gmail.com',
+                    phone: '34793887250',
+                    site: 'www.youtube.com'})
         section.skills-block
           +title_block('Skills', 'skills_icon')
           .skills
-            +skills_item('Creative', 12, 9)
-            +skills_item('Teamwork', 12, 8)
-            +skills_item('Innovate', 12, 7)
-            +skills_item('Communication', 12, 9)
+            +skills_item({name:'Creative',     all_items: 12,level: 9})
+            +skills_item({name:'Teamwork',     all_items: 12,level: 8})
+            +skills_item({name:'Innovate',     all_items: 12,level: 7})
+            +skills_item({name:'Communication',all_items: 12,level: 9})
       .right-content
         section.education
           +title_block('Education', 'education_icon')
           .education-block
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 'article__name_blue')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 'article__name_blue')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 'article__name_blue')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 'article__name_blue')
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: 'article__name_blue'
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: 'article__name_blue'
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: 'article__name_blue'
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: 'article__name_blue'
+            })
         section.experience
           +title_block('Experience', 'experience_icon')
           .experience-block
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.')
-            +education_item('Master Degree', '// Feb 2011 - Jun 2014', 'University name', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.')
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: ''
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: ''
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: ''
+            })
+            +education_item({
+              degree:'Master Degree', 
+              date:'// Feb 2011 - Jun 2014', 
+              name: 'University name', 
+              text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.', 
+              identificator: ''
+            })
         section.software
           +title_block('Software', 'software_icon')
           .softwere-block

@@ -1,9 +1,9 @@
-mixin skills_item(name, skill_all, level_skill)
+mixin skills_item(options)
   .skills__item
-    p.skills__name= name
-    p(class="skills__level" data-skills-level=""+level_skill)
-      - for (var s = 0; s < skill_all; s++)
-      if s < level_skill
+    p.skills__name= options.name
+    p(class="skills__level" data-skills-level=""+options.level)
+      - for (var s = 0; s < options.all_items; s++)
+      if s < options.level
         span.active
       else
         span
